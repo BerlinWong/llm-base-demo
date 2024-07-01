@@ -1,0 +1,60 @@
+{
+    "LyrielUrban": {
+        "ckpt_model": {
+            "name": "",
+            "id": 72396
+        },
+        "lora_model": {
+            "name": "",
+            "id": 27871
+        },
+        "sampler_index": "DPM++ 2M Karras",
+        "width": 512,
+        "height": 768,
+        "CLIP_stop_at_last_layers": 2,
+        "sd_vae": "",
+        "default": true,
+        "styles": [
+            "Urban style"
+        ],
+        "subjects": [
+            "human"
+        ],
+        "fixed_prompt": "(no background),((single object)),(Profile view),(((full view))),(stay away from the camera),(to the right)",
+        "fixed_negative_prompt": "colorful background",
+        "examples": [
+            [
+                "A teenage girl, wearing a white tech-inspired jacket on the street, with pants featuring a belt buckle.",
+                "(original: 1.2), (far shot), (realistic: 1.3) (mixed Korean), masterpiece, best quality, beautiful clean face, fullbody, 1girl, teenager, wearing white techwear jacket and orange trousers with buckle and tape, (crystal necklace), posing for a picture, (red short hair), long legs, big happy warm smile, carrying a cobalt backpack, on the street ",
+                "paintings, sketches, (worst quality:2), (low quality:2), (normal quality:2), dot, mole, lowres, normal quality, monochrome, grayscale, lowres, text, error, cropped, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, out of frame, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck, username, watermark, signature, (mole:1.4),NSFW, watermark"
+            ]
+        ]
+    },
+    "GameIconInstitute": {
+        "ckpt_model": {
+            "name": "",
+            "id": 267897
+        },
+        "lora_model": {
+            "name": "",
+            "id": 0
+        },
+        "sampler_index": "DPM++ 2M Karras",
+        "width": 512,
+        "height": 512,
+        "CLIP_stop_at_last_layers": 2,
+        "sd_vae": "",
+        "default": false,
+        "styles": [
+            "Cartoon style"
+        ],
+        "subjects": [
+            "item"
+        ],
+        "fixed_prompt": "",
+        "fixed_negative_prompt": "",
+        "examples": [
+
+        ]
+    }
+}

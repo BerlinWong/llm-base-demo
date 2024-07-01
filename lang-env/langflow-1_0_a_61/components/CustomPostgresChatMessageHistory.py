@@ -1,8 +1,9 @@
 from typing import Optional
 
+
+from langchain_community.chat_message_histories import PostgresChatMessageHistory
 from langflow.custom import CustomComponent
-from langflow.field_typing import Text
-from langchain_postgres import PostgresChatMessageHistory
+
 
 class Component(CustomComponent):
     display_name = "PostgresChatMessageHistory"
@@ -15,31 +16,34 @@ class Component(CustomComponent):
             "session_id": {
                 "display_name": "Session ID",
                 "info": "Session ID of the chat history.",
-                "input_types": [Text],
             },
             "database_url": {
                 "display_name": "Database Url",
-                "info": "URL of the PostgreSQL database.",
-                "input_types": [Text],
+                "input_types": [],
             },
             "table_name": {
                 "display_name": "Table Name",
-                "info": "Name of the table storing the chat messages.",
-                "input_types": [Text],
+                "input_types": [],
             },
         }
 
     def build(
-            self,
-            database_url: str,
-            session_id: str,
-            table_name: str
+        self,
+        database_url: str,
+        session_id: str,
+        table_name: str
     ) -> PostgresChatMessageHistory:
-        # Initialize the PostgresChatMessageHistory with the provided parameters
         history = PostgresChatMessageHistory(
             session_id=session_id,
             connection_string=database_url,
             table_name=table_name
         )
+        # dialogue = ""
+        # # 从所有的消息记录中取最近100条
+        # for message in history.messages[-100:]:
+        #     if message.type == "human":
+        #         dialogue += f"Human: {message.content}\n"
+        #     elif message.type == "ai":
+        #         dialogue += f"AI: {message.content}\n"
 
         return history
